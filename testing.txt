@@ -1,2 +1,17 @@
-hhhhh
-kjhg
+1. Создала ветку git branch branch1
+git checkout branch1
+создала первый файл touch index.html
+далее git add index.html
+git commit -m test
+git push (git push --set-upstream origin branch1)
+После создала в этой же ветке файл index.html, но после проверки git status высветилось, что создан файл touch, 
+даже без расширения. Закомитился и запушился без проблем, но когда зашла в репозиторий на сервере поняла, что его невозможно изменять.
+2. git checkout branch1
+start errors.txt
+добавила в файл новый текст и сохранила
+git add errors.txt
+git commit -m test6
+git checkout main
+git merge branch1
+после этой команды затребовало, чтобы описала причину для мерджа.
+При мердже второй ветки (branch2) с такими же изменениями выдало E325: ATTENTION, с пояснениями что такой файл уже замерджен.
